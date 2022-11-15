@@ -128,10 +128,12 @@ body{
 
 
 .connexion {
+    position: absolute;
+    z-index: 1;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    margin: 0;
+    
 }
 
 
@@ -139,7 +141,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px 0px;
+    margin: 0 0 0 800px;
     flex: auto;
 
 }
@@ -147,7 +149,7 @@ body{
 .form-wrapper .card {
     width: 400px;
     padding: 20px;
-    background-color: rgb(0 0 0);
+    background-color: rgb(0 0 0 /95%);
     visibility: none;
     opacity: 0;
     transition: all .3s ease-in-out;
