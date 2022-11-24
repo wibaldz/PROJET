@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nova+Round&display=swap');
+
+/*--GENERAL--*/
+/*--#B08AE4--*/
+/*--#013ED2--*/
 
 *{
     margin: 0;
@@ -10,150 +15,209 @@
 }
 
 body{
-    background-color: #EEEDEB;
+    background-color: black;
+    opacity: 0.8;
 
 }
+
+/*--BARRE DE NAVIGATION--*/
 
 
 .nav-bar{
-    height: 150px;
-    width: 80vw;
-    margin: auto;
-    
+    width: 100vw;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    grid-template-columns: 40% 60%;
+    position: relative;
+    /*background-color: white;*/
+    z-index: 0;
+    margin-left: 50px;
     
 }
 
+            /*-- COTE GAUCHE DE LA BARRE DE NAVIGATION : LOGO ET SLOGAN--*/
 
 
-.first-ligne-nav {
-    height: 70%;
+.left-nav-bar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    background-color: red;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.left-nav-bar:hover{
+    background-color: white;
+    
+}
+
+.left-nav-bar:hover .logo-nav{
+    color: #E00105;
+}
+
+.left-nav-bar:hover h1{
+    color: #E00105;
+}
+
+.left-nav-bar:hover p{
+    color: #E00105;
+}
+
+.logonav-slogan{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+
+.slogan h6{
+    margin-left: 15px;
 }
 
 .logo-nav{
+
     font-size: 70px;
-    color: #00745A;
+    color: aliceblue;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
+
+/*.logo-nav:hover{
+    color: #E00105;
+}
+
+.logonav-slogan:hover{
+    color:#E00105
+}*/
+
 
 .slogan h1{
-    margin-left: 10px;
-    
+    font-family: 'Nova Round', cursive;
+    margin-left: 30px;
+    color: aliceblue;  
 }
 
-.slogan p{
-    margin-left: 20px;
+.slogan p{ 
     font-family: 'Dancing Script', cursive;
-    color: #00589A;
+    color: aliceblue;
     font-size: smaller;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
 
 }
+/*--COTE DROIT DE LA BARRE DE NAVIGATION--*/
 
-#oubli{
+.right-nav-bar{
+    width: 50vw;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    background-color: #B03661;    
+    position: relative;
+     
+}
+
+            /*--SELECTEUR DE LANGUE + BOUTON CONNECTE--*/
+
+.langmenu-connect{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    margin-top: 10px;
+    position: absolute;
+        
+}
+
+        /*-- selecteur de langue--*/
+
+#select-language{
+    width: 120px;
+    
+    box-shadow: 0px 1px 10px rgba(19 210 177 /55%);
+    position: absolute;
+  
+    
+}
+
+#select-language select{
+    width: 100px;
+    height: 35px;
+    padding-left: 2px;
     font-size: 13px;
-    margin-top: 5px;
+    font-weight: bold;
+    color: #B03661;
+    background-color: #94f7e6;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    position: absolute;
+    cursor: url(assets/hand-pointer-regular.svg), default;
 }
 
 
-.flag{
-    display: flex;
-
-    
-}
-
-.flag img{
-    width: 30px;
-    object-fit: cover;
-    margin-left: 20px;
-}
-
-.left-side-nav{
-    display: flex;
-    width: 33%;
-    
-}
-
-.right-side-nav a{
-    
-    color: gray;
-    text-decoration: none;
-    
-    
-}
-
-.right-side-nav p{
-    font-size: 15px;
-    
-
-}
-
-
-.second-ligne-nav, .inner-nav-second-ligne{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-}
-
+              /*--bouton de connexion--*/
 .btn{
+    width: 175px;
     padding: 10px 20px;
+    margin-left: 120px;
     font-size: 0.6rem;
     font-weight: bold;
     font-style: italic;
-    margin-top: 0;
+    cursor: pointer;
     background-color: transparent;
-    color: #303131;
+    color: #94f7e6;
     border: 1px solid transparent;
+    position: absolute;
+
+}
+
+.btn:hover {
+
+    border: 2px solid #94f7e6;
+    border-radius: 50px;
     transition: border-color .3s;
 }
 
-.btn:hover{
-    
-    border: 2px solid #94f7e6;
-    border-radius: 50px;
+
+
+.user {
+    font-size: 20px;
+    padding-right: 10px;
 }
 
-.user{
-    font-size: 20px;
-    
-}
-.user:hover{
+.user:hover {
     color: #94f7e6;
 }
 
-
+      /*formulaire de connexion*/
 
 .connexion {
+    visibility: hidden;
     position: absolute;
     z-index: 1;
     display: flex;
     align-items: center;
     margin: 0;
-    
 }
-
 
 .form-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 0 800px;
-    flex: auto;
-
+    flex: auto;  
+    
 }
-
 .form-wrapper .card {
     width: 400px;
     padding: 20px;
     background-color: rgb(0 0 0 /95%);
-    visibility: none;
-    opacity: 0;
     transition: all .3s ease-in-out;
-
 }
 
 .card.show {
@@ -186,7 +250,7 @@ body{
     box-shadow: inset 1px 1px 2px rgba(19 210 177 /55%), inset -1px 1px 2px rgba(19 210 177 /55%), -1px -1px 2px rgba(19 210 177 /55%),
         inset 1px -1px 2px rgba(19 210 177 /55%);
     border-color: #94f7e6;
-    transition: border .3s;
+    transition: border 0.3s;
 
 }
 
@@ -201,11 +265,19 @@ form {
     flex: 0 0 100%;
 }
 
-.toggleForm {
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s ease-in-out;
+/*.toggleForm{
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+    
 }
+/*.toggleForm.active{
+ visibility: visible;
+    opacity: 1;
+    
+}*/
+
+
 
 .form-control {
     width: 100%;
@@ -224,16 +296,21 @@ form {
 }
 
 .formButton {
+    width: 130px;
+    height: 50px;
     border: 1px solid transparent;
-    padding: 1rem 3rem;
     background-color: #94f7e6;
     border-radius: 50px;
     margin-top: 1rem;
-    font-style: 1rem;
+    font-size: 0.7rem;
+    font-family: 'Nova Round', cursive;
+    text-align: center;
     transition: all .3s ease-in-out;
+    cursor: pointer;
 }
 
 .formButton:hover {
+
     box-shadow: 3px 5px 15px #94f7e6;
     transform: translateY(-5px);
 }
@@ -241,159 +318,129 @@ form {
 
 
 
+            /*--LE MENU DE LA BARRE DE NAVIGATION--*/
+.menu-nav{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 75px;
+    position: absolute;
+    margin-left: 30px;
+    
+    
+}
 
 
+.menu-nav ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 13px;
 
+}
 
+.menu-nav li{
+    margin-left: 10px;
+}
 
-
-
-
-
-
+.right-nav-bar a{
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;   
+}
 
 
 .icone-home{
-    color: #C8E197;
+    color: aliceblue;
     font-size: 30px;
     margin-right: 10px;
-    margin-left: 150px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.icone-home:hover{
+    color: #94f7e6;
 }
 
 
-
-.inner-nav-second-ligne li{
-    list-style-type: none;
-    margin-right: 20px;
-    font-size: 15px;
-}
-
-.inner-nav-second-ligne a{
-    text-decoration: none;
-    color: #00745A;
-}
 
 .icone-home:hover, a:hover{
     
     font-weight: 800;
     transition: all 0.5s ease-in-out;
+    color: #94f7e6;
 }
 
  
     
+#bar-pink{
+    width: 126px;
+    height: 5px;
+    background-color:  rgb(248, 115, 115);
+    margin-top: 5px;
+}
+
 #bar-yellow{
-    width: 142px;
+    width: 120px;
     height: 5px;
-    background-color: #C8E197;
-    margin-top: 10px;
+    background-color: yellow;
+    margin-top: 5px;
 }
 
-#bar-green{
-    width: 130px;
+#bar-blue{
+    width: 258px;
     height: 5px;
-    background-color: #61F1EB;
-    margin-top: 10px;
+    background-color: blue;
+    margin-top: 5px;
 }
 
-#bar-red{
-    width: 150px;
-    height: 5px;
-    background-color: rgb(248, 115, 115);
-    margin-top: 10px;
-}
-
-#bar-blue {
-    width: 300px;
-    height: 5px;
-    background-color: #067691;
-    margin-top: 10px;
-}
-
-
-
-.image-call img{
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-      
-}
 
 .sparation-bar{
-    
     width: 100vw;
     height: 30px;
-    margin: auto;
-    margin-top: 210px;
-    background-color: palevioletred;
+    background-color: white;
     justify-content: center;
+    margin-top: 57px;
 }
-
-.home{
+    /*SECTION ACCEUIL*/
+.home-inner{
     width: 80vw;
-    height: 120vh;
-    background-color: #C8E197;
-
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E00105;
     margin: auto;
     
-}
 
+    
+}
 .home img{
-    opacity: 0.5;
-}
-
-.flag img {
-    width: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 36px gray;
     object-fit: cover;
-    margin-left: 20px;
+    margin-left: -80px;
+    margin-right: 40px;
 }
 
-.top-lign-photos{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-.top-lign-photos img {
-    width: 265px;
-    height: 176px;
-    object-fit: cover;
-    border-radius: 20px;
-
-}
-
-.center-lign{
-    display: flex;
-}
-
-.left-center-lign-photos{
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    
-    
-    
-}
-
-.left-center-lign-photos img {
-    width: 265px;
-    height: 176px;
-    object-fit: cover;
-    margin-top: 10px;
-    border-radius: 20px;
-    
-}
-
-.right-center-lign p{
-
-    text-align: center;
-    margin-top: 100px;
-}
-
-.right-center-lign h2{
-    text-align: center;
+.text-home p{
     margin-top: 50px;
+    color: white;
+    font-family: 'Nova Round', cursive;
     
+}
+
+.text-home h2{
+    font-family: 'Nova Round', cursive;
+    color: white;
+    font-family: 'Nova Round', cursive;
+    font-size: 1rem;
+    
+}
+
+.skills{
+    color: white;
+    font-family: 'Nova Round', cursive;
 }
 
 .nous, .methode {
@@ -413,10 +460,10 @@ form {
 }
 
 .top-lign-photos{
-    background-color: black ;
+    background-color: rgb(0 0 0 /60%) ;
 }
 .left-center-lign-photos{
-    background-color: black;
+    background-color: rgb(0 0 0 /60%);
 }
 
 .nous h3, .nous p{
@@ -560,11 +607,12 @@ form {
     }
 
   
-    input, select{
+    input, #contact select{
         background-color: #3891A7;
         height: 50px;
         width: 700px;
         border: none;
+        color: white;
     }
     
     input{

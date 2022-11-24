@@ -12,84 +12,65 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--BOUTON HAUT-->
     <a href="#" class="btn-haut">
       <i class="fa-solid fa-angles-up icone-arrow"></i>
     </a>
     <header>
-      <nav class="nav-bar">
-        <div class="first-ligne-nav">
-          <div class="left-side-nav">
-            <i class="fa-brands fa-phoenix-framework logo-nav"></i>
-            <div class="slogan">
-              <h1>ALGER CALL</h1>
-              <p>Experts en prospection téléphonique</p>
+      <!--BARRE DE NAVIGATION-->
+      
+      <div class="nav-bar">
+          <div class="left-nav-bar">
+            <div class="logonav-slogan">
+              <i class="fa-brands fa-phoenix-framework logo-nav"></i>
+              <div class="slogan">
+                <h1>ALGER CALL</h1>
+                <h6>By EARL Lamali CORP, Télémarketing</h6>
+                <p>Experts en PRESTATIOONS télémarketing</p>
+              </div>
             </div>
           </div>
-
-          <div class="flag">
-            <img
-              src="https://img.freepik.com/vecteurs-libre/illustration-du-drapeau-britannique_53876-18166.jpg?t=st=1667507815~exp=1667508415~hmac=7b51ba8ec14fc8ebcd1d828311016840fc94b125460517cd02f88711c1b52899"
-              alt=""
-            />
-            <img
-              src="https://img.freepik.com/psd-gratuit/carte-france-aquarelle-aux-couleurs-du-drapeau-francais_125540-2286.jpg?t=st=1667508154~exp=1667508754~hmac=f5fac298c35687d985866318c332b621399f553bd2ed3bd501e82afad6a01cdc"
-              alt=""
-            />
-          </div>
-
+<!--SELECTEUR LANGUE + BOUTON-->
+          <div class="right-nav-bar">
+            <div class="langmenu-connect-menunav">
+              <div class="langmenu-connect">
+                   <!--selecteur de langue--> 
+                <div class="info" id="select-language">
+                  <select>
+                    <option value="fr"><a href="#" class="fr">Français</a></option>
+                    <option value="en"><a href="#" class="en">English</a></option>
         
-            
-          <div class="connect-btn">
-            <i class="fa-solid fa-user user"></i>
-            <button class="btn" id="displayForm">Se connecter</button>
-          </div>
+                  </select>
+                </div>
 
-          
-            
-            
-          
-        </div>
+                <!--bouton de connexion-->
+                <div class="connect-btn">
+                  <button class="btn" id="displayForm"><i class="fa-solid fa-user user"></i>Se connecter</button>
+                </div>
+              
+              </div>
 
-        <div class="second-ligne-nav">
-          <a href="#home"
-            ><i class="fa-solid fa-house-chimney icone-home"></i
-          ></a>
+              <!--contenu de la barre de navigation-->
 
-          <ul class="inner-nav-second-ligne">
-            <li class="nav-item">
-              <a href="#yellow"
-                >NOUS CONNAÎTRE
-                <div id="bar-green"></div
-              ></a>
-            </li>
+              <div class="menu-nav">
+                <ul>
+                  <li class="nav-item"><a href="#home"><i class="fa-solid fa-house-chimney icone-home"></i></a></li>
+                  <li class="nav-item"><a href="#nous">NOUS CONNAÎTRE<div id="bar-pink"></div></a></li>
 
-            <li class="nav-item">
-              <a href="#demarche"
-                >NOTRE METHODE
-                <div id="bar-red"></div
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact"
-                >NOUS CONTACTER / NOUS REJOINDRE
-                <div id="bar-blue"></div
-              ></a>
-            </li>
+                  <li class="nav-item"><a href="#demarche">NOTRE METHODE<div id="bar-yellow"></div></a></li>
+                  <li class="nav-item"><a href="#contact">NOUS CONTACTER / NOUS REJOINDRE<div id="bar-blue"></div></a></li>
            
-          </ul>
-        </div>
-
-        <div class="image-call">
-          <img
-            src="https://t3.ftcdn.net/jpg/01/34/01/54/360_F_134015459_voVpDFOCKlJPyQqqisSxtNbetjfc3JVo.webp"
-            alt=""
-          />
-        </div>
-      </nav>
-
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div> 
+      <!--formulaires de connexion-->
+      
       <section class="connexion">
         <div class="sec-container">
           <div class="form-wrapper">
@@ -143,39 +124,48 @@
           </div>
         </div>
       </section>
+      
 
-      <div class="sparation-bar"></div>
+      <!--DEFILE LISTE CLIENT-->
+      <div class="liste-client">
+        <h4>Ils nous font confiance</h4>
+        <div class="logos-clients">
+          
+
+        </div>
+      </div>
+
+      
+
+      
     </header>
 
     <main>
       <section class="home">
-        <div class="top-lign-photos">
-          <img src="assets/photo1.jfif" alt="" />
-          <img src="assets/photo2.jfif" alt="" />
-          <img src="assets/photo3.jfif" alt="" />
-          <img src="assets/photo4.jfif" alt="" />
-        </div>
-
-        <div class="center-lign">
-          <div class="left-center-lign-photos">
-            <img src="assets/photo5.jfif" alt="" />
-            <img src="assets/photo6.jfif" alt="" />
-            <img src="assets/image10.jpg" alt="">
-            
+        <div class="home-inner">
+          <div class="image-alger">
+            <img src="assets/Alger.jpg" alt="">
           </div>
-          <div class="right-center-lign">
-            <h2 id="home">Besoin d'aide dans vos campagnes de prospection?</h2>
-            <p>
-              Une équipe jeune et dynamique avec un équipement à la pointe de la technologie sont mis 
-              à votre disposition.
+        
+          <div class="text-home">
+            <h2 id="invitation">Vous êtes à la recherche d’un centre d'appel multilingue <em>(Francais, Tamazighte, Arabe et Anglais)</em> 
+              pour externaliser votre service client que ce soit de BtoB ou de BtoC?</h2>
+            <p> Vous êtes au bon endroit <i><em>Alger Call</em></i>, propose des prestations sur mesure tenant compte de vos critères et objectifs répondants à vos attentes :</p>
+            <ul class="skills">
               
-            </p>
+              <li>Prise de rendez-vous</li>
+              <li>Télévente et télémarketing</li>
+              <li>Support client et SAV</li>
+              <li>Standard</li>
+              <li>Enquête de satisfaction ...</li>
+           </ul>
             
           </div>
         </div>
+    
       </section>
 
-      <section id="yellow" class="nous">
+      <section id="nous" class="nous">
         <h2>Qui sommes nous?</h2>
         <h2>AGENCE DE TELEMARKETING BtoB</h2>
         <h3>PRISE DE RENDEZ-VOUS QUALIFIES</h3>
