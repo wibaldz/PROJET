@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AlgerCall</title>
+    <link rel="shortcut icon" href="assets/crown-solid.svg" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -20,17 +21,32 @@
     <a href="#" class="btn-haut">
       <i class="fa-solid fa-angles-up icone-arrow"></i>
     </a>
+
+    <!--RESEAUX SOCIAUX-->
+    <div class="reseaux-sociaux">
+      <div class="contact-social"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+      <div class="social-item"><a href="#"><i class="fa-brands fa-yahoo"></i></a></div>
+      <div class="social-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+      <div class="social-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
+
+    </div>
+
+
+
     <header>
       <!--BARRE DE NAVIGATION-->
       
       <div class="nav-bar">
           <div class="left-nav-bar">
-            <div class="logonav-slogan">
+            <div class="logonav-slogan-phAlger">
               <i class="fa-brands fa-phoenix-framework logo-nav"></i>
               <div class="slogan">
                 <h1>ALGER CALL</h1>
                 <h6>By EARL Lamali CORP, Télémarketing</h6>
                 <p>Experts en PRESTATIOONS télémarketing</p>
+              </div>
+              <div class="image-alger">
+                <img src="assets/Alger.jpg" alt="">
               </div>
             </div>
           </div>
@@ -57,14 +73,16 @@
               <!--contenu de la barre de navigation-->
 
               <div class="menu-nav">
-                <ul>
-                  <li class="nav-item"><a href="#home"><i class="fa-solid fa-house-chimney icone-home"></i></a></li>
-                  <li class="nav-item"><a href="#nous">NOUS CONNAÎTRE<div id="bar-pink"></div></a></li>
+                <div class="nav-inner">
+                  <ul>
+                    <li class="nav-item"><a href="#home"><i class="fa-solid fa-house-chimney icone-home"></i></a></li>
+                    <li class="nav-item"><a href="#nous-connaitre">NOUS CONNAÎTRE<div id="bar-red"></div></a></li>
 
-                  <li class="nav-item"><a href="#demarche">NOTRE METHODE<div id="bar-yellow"></div></a></li>
-                  <li class="nav-item"><a href="#contact">NOUS CONTACTER / NOUS REJOINDRE<div id="bar-blue"></div></a></li>
+                    <li class="nav-item"><a href="#demarche">AVIS CLIENTS<div id="bar-yellow"></div></a></li>
+                    <li class="nav-item"><a href="#contact">NOUS CONTACTER / NOUS REJOINDRE<div id="bar-blue"></div></a></li>
            
-                </ul>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -73,51 +91,69 @@
       
       <section class="connexion">
         <div class="sec-container">
-          <div class="form-wrapper">
+          <div class="formWrapper">
             <div class="card">
               <div class="card-header">
-                <div id="forAdmin" class="form-header active">
-                  Admnistrateur
-                </div>
+                <div id="forAdmin" class="form-header active">Admnistrateur</div>
                 <div id="forClient" class="form-header">Client</div>
               </div>
+              
               <div class="card-body" id="formContainer">
-                <form id="formAdmin">
+                <form id="adminForm">
                   <input
-                    type="text"
-                    class="form-control"
-                    placeholder="@administrateur"
+                  type="text"
+                  class="form-control"
+                  placeholder="@administrateur"
                   />
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Mot de passe"
-                  />
-                  <input
+                  <div class="passWord">
+                   <input id="passAdmin" type="password" class="form-control" placeholder="Mot de passe"/>
+                   <img src="assets/oeilbarre.png" alt="" id="eyeAdmin" onClick="changer()">
+                  </div>
+                  <div class="passWord">
+                    <input
+                    id="passAdminConfirm"
                     type="password"
                     class="form-control"
                     placeholder="Confirmer mot de passe"
-                  />
+                    />
+                     <img src="assets/oeilbarre.png" id="eyeAdminConfirm" onClick="changerconfirm()">
+                  </div>
+                  <label for="remember"><p>Se Souvenir de moi</p> 
+                    <input type="checkbox" class="form-check" id="remember" 
+                    />
+                  </label>
                   <button class="formButton">Se connecter</button>
                 </form>
 
-                <form id="formClient" class="toggleForm">
+                <form id="clientForm" class="toggleForm">
                   <input
-                    type="text"
-                    class="form-control"
-                    placeholder="@client"
+                  type="text"
+                  class="form-control"
+                  placeholder="@client"
                   />
-                  <input
+                  <div class="passWord">
+                    <input
+                    id="passClient"
                     type="password"
                     class="form-control"
                     placeholder="Mot de passe"
-                  />
-                  <input
+                    />
+                    <img src="assets/oeilbarre.png" id="eyeClient" onclick="changerclient()">
+                  </div>
+                  <div class="passWord">
+                    <input
+                    id="passClientConfirm"
                     type="password"
                     class="form-control"
                     placeholder="Confirmer mot de passe"
-                  />
-                  <button class="formButton">connection</button>
+                    />
+                    <img src="assets/oeilbarre.png" id="eyeClientConfirm" onclick="changerclientconfirm()">
+                  </div>
+                  <label for="remember"><p>Se Souvenir de moi</p> 
+                    <input type="checkbox" class="form-check" id="remember" 
+                    />
+                  </label>
+                  <button class="formButton">Se connecter</button>
                 </form>
               </div>
             </div>
@@ -128,138 +164,150 @@
 
       <!--DEFILE LISTE CLIENT-->
       <div class="liste-client">
-        <h4>Ils nous font confiance</h4>
+        <h3>Ils nous font confiance</h3>
         <div class="logos-clients">
-          
-
+          <img src="assets/algérie.png" alt="">
+          <img src="assets/afrique sud.png" alt="">
+          <img src="assets/allemagne.png" alt="">
+          <img src="assets/canada.png" alt="">
+          <img src="assets/etats-unis.png" alt="">
+          <img src="assets/australie.png" alt="">
+          <img src="assets/lettonie.png" alt="">
         </div>
       </div>
-
-      
-
-      
+    
     </header>
 
     <main>
       <section class="home">
         <div class="home-inner">
-          <div class="image-alger">
-            <img src="assets/Alger.jpg" alt="">
+          <div class="img-groupe">
+            <img src="assets/plateau1.jpg" alt="">
           </div>
-        
+                 
           <div class="text-home">
-            <h2 id="invitation">Vous êtes à la recherche d’un centre d'appel multilingue <em>(Francais, Tamazighte, Arabe et Anglais)</em> 
-              pour externaliser votre service client que ce soit de BtoB ou de BtoC?</h2>
-            <p> Vous êtes au bon endroit <i><em>Alger Call</em></i>, propose des prestations sur mesure tenant compte de vos critères et objectifs répondants à vos attentes :</p>
-            <ul class="skills">
-              
-              <li>Prise de rendez-vous</li>
-              <li>Télévente et télémarketing</li>
-              <li>Support client et SAV</li>
-              <li>Standard</li>
-              <li>Enquête de satisfaction ...</li>
-           </ul>
             
+            <h2 id="invitation">A la recherche d’un centre d'appel multilingue pour externaliser votre service client?</h2>
+              <h2>En quête d'une meilleure visibilité pour vos produits et/ou prestations?</h2>
+              <h2>Soucieux d'enrichir votre portefeuille client?</h2>
+            <p> Vous êtes alors au bon endroit !<br><i><em>Alger Call</em></i>, vous propose des prestations sur mesure, en BtoB et BtoC dans la 
+              langue de votre choix : Francais, Tamazight, Arabe, Anglais, ... 
+            <p>Nous formons une équipe motivée et dynamique, relevant tout défis pour atteindre vos objectifs commerciaux et marketing.</p>
+
+            <br><h2>Vite contactez-nous! <a href="#contact"><img src="assets/tel.png" alt=""></a> le meilleur acceuil vous sera réservé.</h2>
+            
+          <div class="call-icon">
+            <img src="assets/iconecall1.png" alt="">
           </div>
         </div>
     
       </section>
 
-      <section id="nous" class="nous">
-        <h2>Qui sommes nous?</h2>
-        <h2>AGENCE DE TELEMARKETING BtoB</h2>
-        <h3>PRISE DE RENDEZ-VOUS QUALIFIES</h3>
-        <p>
-          Un seul objectif : aider vos commerciaux à vendre plus, le plus
-          rapidement possible en vous fournissant des rdvs qualifiés avec des
-          décideurs mûrs avec un intérêt pour vos services et produits!
-        </p>
-        <p>
-          Des commerciaux sédentaires travailleront votre portefeuille de
-          prospects afin de prendre de réels rendez vous qualifiés.
-        </p>
-        <p>
-          Notre Agence Télémarketing prospecte sur l'intégralité du territoire
-          français: Paris, Lille, Bordeaux....
-        </p>
-        <img src="assets/backround.jfif" alt="" />
-      </section>
-      <section id="demarche" class="methode">
-        <h2>Notre méthode</h2>
-        <p>
-          Notre Agence Télémarketing BTOB fourni à nos clients un service clé
-          en main.</p>
-        <p>Un brief sera réalisé avant le départ de la campagne de
-          Téléprospection, nous validerons ensemble vos enjeux commerciaux, vos
-          objectifs, et définirons les cibles à atteindre.</p> 
-        <p>Vous travaillerez en collaboration avec un(e) commercial(e) sédentaire
-          dédié(e) salarié(e) de l'entreprise.</p>
-        <p>Bien évidemment, les appels seront passés d'Algérie.</p>
-        </p>
-        <h4>Qu'entendons nous par RDV QUALIFIE?</h4>
-        <p>Pour être qualifié, un rendez vous correspond à différents critères de qualification:</p>
-        <ul>
-          <li>- RDV AVEC UN DECIDEUR</li>
-          <li>- PROSPECT QUI A LE TEMPS NECESSAIRE A VOUS ACCORDER</li>
-          <li>- DECIDEUR INTERESSE PAR VOS SERVICES</li>
-        </ul>
-        <img src="assets/backround2.jfif" alt="">
-      </section>
-      <section id="contact" class="blue">
-        <div class="blue-inner">
-        <h4>Merci de préciser votre demande afin que nous vous dirigions vers le bon interlocuteur:</h2>
-        <div class="first-ligne">
-          <div class="service"><i class="fa-solid fa-person-chalkboard chalk"></i><p>Nos services</p></div>
-          <div class="jobs"><i class="fa-solid fa-briefcase case"></i><p>Carrière</p></div>
-          <div class="autre">
-            <div id="dot"><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i>
-            </div><p>Autre</p>
-          </div>      
+      <section id="nous-connaitre" class="nous-connaitre">
+        <div class="nousconnaitre-questions">
+          <h2>Vos soucis d'appels, Nos priorités d'appels!</h2>
+          <h2>Qui sommes nous<i class="fa-solid fa-question qMark"></i></h2>
+          <h2>Nous sommes <span>AlgerCall,</span> AGENCE DE TELEMARKETING & DE TELE-VENTE<i class="fa-solid fa-lightbulb"></i></h2>
+        </div>
+        
+        <div class="nousconnaitre-inner">
+          
+          <div class="nousconnaitre-reponse">
+            <p>Nous fournissons à nos clients un service clé en main. De ce fait nous sommes fière de participer à l'essor
+              d'une clientèle variée depuis plus de dix ans.
+              Alors, choisir AlgerCall c'est garantir la croissance de votre entreprise.
+               Vous travaillerez en étroite collaboration avec l'un(e) de nos experts(es) de la prospection commercial(e) 
+               ou service à la clientèle dédié(e) salarié(e) de l'entreprise afin de valider vos enjeux, vos objectifs et 
+               les cibles à atteindre.
+               Un des meilleurs rapports qualité/prix pour une expérience des plus enrichissante tout étant basé en Algérie.      objectifs, et définirons les cibles à atteindre.
+                
+
+            </p>
+              
+          </div>
+          
+          
+          <div class="algercall-taches">
+            <p><span>Alger Call</span> prend en charge pour vous, vos :</p>
+            <ul>
+              <li><i class="fa-solid fa-caret-right"></i>Prise de rendez-vous</li>
+              <li><i class="fa-solid fa-caret-right"></i>Télévente et télémarketing</li>
+              <li><i class="fa-solid fa-caret-right"></i>Support client et SAV</li>
+              <li><i class="fa-solid fa-caret-right"></i>Standard</li>
+              <li><i class="fa-solid fa-caret-right"></i>Enquête de satisfaction...</li>
+            </ul> 
+            <img src="assets/plateau2.jfif" alt="">         
+          </div>
           
         </div>
-        <h3>Vos informations</h3>
-        <form methode="post" action="traitement.php">
-          <input type="text" name="first-name" id="first-name" placeholder="Votre prénom *">
-          <input type="text" name="name" id="name" placeholder="Votre nom *">
-          <input type="text" name="entreprise" id="entreprise" placeholder="Votre entreprise">
-          <input type="text" name="fonction" id="fonction" placeholder="Votre fonction">
-          <input type="text" name="email" id="email" placeholder="Votre adresse email *">
-          <input type="number" name=phone id="phone" placeholder="Votre numéro de téléphone *">
-          <select name="pays" id="pays">
-            <option value="pay">Votre pays</option>
-            <option value="algérie">Algérie</option>
-            <option value="france">France</option>
-            <option value="autre">Autre</option>
-          </select>
-          <select name="activité" id="activité">
-            <option value="">Quel est votre secteur dactivité?</option>
-            <option value="elec">Energie</option>
-            <option value="transport">Transport</option>
-            <option value="mode">Mode</option>
-            <option value="servicesfinanciers">Services Financiers</option>
-            <option value="santé">Santé</option>
-            <option value="public">Services Publics</option>
-            <option value="autre">Autre</option>
-            <textarea name="comentaire" id="" cols="30" rows="10" placeholder="Comment peut-on vous aider?"></textarea> 
-            <input type="submit" id="btn-sub" value="Envoyer"></div>  
+       
+      </section>
 
-          </select>
-        </form>
-
-
+      <!--QUE PENSENT DE NOUS NOS CLIENT-->
+      <section id="demarche" class="retour-client">
+        <h2>Que pensent de nous nos clients</h2>
+      </section>
+      
+      <!--FORMULAIRE CONTACT-->   
+      <section id="contact" class="blue">
+        <div class="blue-inner">
+          <h4>Merci de préciser votre demande afin que nous vous dirigions vers le bon interlocuteur:</h4>
+          <div class="first-ligne">
+            <div class="service"><i class="fa-solid fa-person-chalkboard chalk"></i><p>Nos services</p></div>
+            <div class="jobs"><i class="fa-solid fa-briefcase case"></i><p>Carrière</p></div>
+            <div class="autre">
+              <div id="dot">
+                <i class="fa-solid fa-circle iAutre"></i><i class="fa-solid fa-circle iAutre"></i><i class="fa-solid fa-circle iAutre"></i>
+              </div>
+              <p>Autre</p>
+            </div>      
+          </div>
+          
+          <h3>Vos informations</h3>
+          <form methode="post" action="traitement.php">
+            <input type="text" name="first-name" id="first-name" placeholder="Votre prénom *">
+            <input type="text" name="name" id="name" placeholder="Votre nom *">
+            <input type="text" name="entreprise" id="entreprise" placeholder="Votre entreprise">
+            <input type="text" name="fonction" id="fonction" placeholder="Votre fonction">
+            <input type="text" name="email" id="email" placeholder="Votre adresse email *">
+            <input type="number" name=phone id="phone" placeholder="Votre numéro de téléphone *">
+            <select name="pays" id="pays">
+              <option value="pay">Votre pays</option>
+              <option value="algérie">Algérie</option>
+              <option value="france">France</option>
+              <option value="autre">Autre</option>
+            </select>
+            <select name="activité" id="activité">
+              <option value="secteurActivite">Quel est votre secteur dactivité?</option>
+              <option value="elec">Energie</option>
+              <option value="transport">Transport</option>
+              <option value="mode">Mode</option>
+              <option value="servicesfinanciers">Services Financiers</option>
+              <option value="santé">Santé</option>
+              <option value="public">Services Publics</option>
+              <option value="autre">Autre</option>
+              <textarea name="comentaire" id="" cols="30" rows="10" placeholder="Comment peut-on vous aider?"></textarea> 
+              <input type="submit" id="btn-sub" value="Envoyer"></div>  
+            </select>
+          </form>
+        </div>
       </section>
     </main>
+    <!--BAS DE PAGE-->
     <footer>
       <div class="footer-inner">
+        
         <div class="gmaps">
+          <p>Nous trouver</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d325.1153174162533!2d3.054774365622229!3d36.770240805693774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAir%20Alg%C3%A9rie!5e1!3m2!1sfr!2sdz!4v1668123246452!5m2!1sfr!2sdz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="adresse">
-          <p>Alger Call</p>
-          <p>xxxxxxxxxxxxxxx</p>
-          <p>Alger 16000</p>
-          <p>Tél +213 xx xx xx xx</p>
-          <p>email contact@yahoo.fr</p>
+          <span><p>Alger Call</p></span>
+          <div class="ad">
+            <p><i class="fa-solid fa-address-card"></i>7, rue Henri Dunan place Maurice Audin Alger 16000</p>
+          </div>
+          <div class="tel"><p><i class="fa-solid fa-phone-volume"></i>Tél (+213)21782919</p></div>
+          <div class="mail"><p><i class="fa-solid fa-at"></i>contact@yahoo.fr</p></div>
         </div>
       </div>
     </footer>

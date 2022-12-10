@@ -1,9 +1,10 @@
 const displayForm = _("displayForm");
 const forAdmin = _("forAdmin");
-const formAdmin = _("formAdmin");
+const adminForm = _("adminForm");
 const forClient = _("forClient");
-const formClient = ("formClient");
-const formContainer = ("formContainer");
+const clientForm = _("clientForm");
+const formContainer = _("formContainer");
+
 displayForm.addEventListener("click", showForm);
 
 
@@ -11,22 +12,25 @@ displayForm.addEventListener("click", showForm);
 forAdmin.addEventListener("click", () => {
   forAdmin.classList.add("active");
   forClient.classList.remove("active");
-  if (formAdmin.classList.contains("toggleForm")) {
-    formContainer.style.transform = ("translate(0%)");
-    formContainer.style.transition = ("transform .5s");
-    formClient.classList.add("toggleForm");
-    formAdmin.classList.remove("toggleForm");
+  
+  if (adminForm.classList.contains("toggleForm")) {
+    formContainer.style.transform = "translate(0%)";
+    formContainer.style.transition = "transform .5s";
+    clientForm.classList.add("toggleForm");
+    adminForm.classList.remove("toggleForm");
+    
+    
   }
 });
 
 forClient.addEventListener("click", () => {
   forAdmin.classList.remove("active");
   forClient.classList.add("active");
-  if (formClient.classList.contains("toggleForm")) {
-    formContainer.style.transform = ("translate(-100%)");
-    formContainer.style.transition = ("transform .5s");
-    formClient.classList.remove("toggleForm");
-    formAdmin.classList.add("toggleForm");
+  if (clientForm.classList.contains("toggleForm")) {
+    formContainer.style.transform = "translate(-100%)";
+    formContainer.style.transition = "transform .5s";
+    clientForm.classList.remove("toggleForm");
+    adminForm.classList.add("toggleForm");
   }
 });
 
@@ -35,19 +39,66 @@ function _(e) {
 }
 
 function showForm() {
-  document.querySelector(".form-wrapper .card").classList.toggle("show");
+  document.querySelector(".formWrapper .card").classList.toggle("show");
 }
 
-const forClientButton = document.querySelector("#forClient");
-const form = document.querySelector(".toggleForm");
-forClientButton.addEventListener("click", function () {
-  form2.classList.remove("active");
+e=true;
+function changer(){
+  if(e){
+    document.getElementById("passAdmin").setAttribute("type", "text");
+    document.getElementById("eyeAdmin").src="assets/oeil.png";
+    e=false;
+  }
+  else{
+    document.getElementById("passAdmin").setAttribute("type", "password");
+    document.getElementById("eyeAdmin").src="assets/oeilbarre.png";
+    e=true;
 
-  form.classList.toggle("active");
-});
-const forAdmintButton = document.querySelector("#forAdmin");
-const form2 = document.querySelector("#formAdmin");
-forAdmintButton.addEventListener("click", function () {
-  form.classList.remove("active");
-  form2.classList.toggle("active");
-});
+  }
+}
+
+e=true;
+function changerconfirm(){
+  if(e){
+    document.getElementById("passAdminConfirm").setAttribute("type", "text");
+    document.getElementById("eyeAdminConfirm").src="assets/oeil.png";
+    e=false;
+  }
+  else{
+    document.getElementById("passAdminConfirm").setAttribute("type", "password");
+    document.getElementById("eyeAdminConfirm").src="assets/oeilbarre.png";
+    e=true;
+
+  }
+}
+
+
+e=true;
+function changerclient(){
+  if(e){
+    document.getElementById("passClient").setAttribute("type", "text");
+    document.getElementById("eyeClient").src="assets/oeil.png";
+    e=false;
+  }
+  else{
+    document.getElementById("passClient").setAttribute("type", "password");
+    document.getElementById("eyeClient").src="assets/oeilbarre.png";
+    e=true;
+
+  }
+}
+
+e=true;
+function changerclientconfirm(){
+  if(e){
+    document.getElementById("passClientConfirm").setAttribute("type", "text");
+    document.getElementById("eyeClientConfirm").src="assets/oeil.png";
+    e=false;
+  }
+  else{
+    document.getElementById("passClientConfirm").setAttribute("type", "password");
+    document.getElementById("eyeClientConfirm").src="assets/oeilbarre.png";
+    e=true;
+
+  }
+}
