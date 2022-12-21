@@ -102,3 +102,36 @@ function changerclientconfirm(){
 
   }
 }
+
+
+
+const ul = document.querySelector(".nav-inner ul");
+navItems = document.querySelectorAll(".nav-inner ul li a");
+sections = document.querySelectorAll("section");
+document.addEventListener("scroll", (event) => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+  navItems.forEach((li) => {
+    li.classList.remove("active");
+    li.getAttribute("href") === `#${current}` && li.classList.add("active");
+  });
+  console.log(current);
+});
+
+const button = document.querySelector(".menu");
+button.addEventListener("click", () => {
+  button.classList.toggle("active");
+  ul.classList.toggle("active");
+});
+
+console.log(window);
+document.getElementById("title")
+title.innerText()
+title.innerHtml()
+let paragraphe = getElementsByTagName('p');
+console.log(paragraphe[0].innerText);

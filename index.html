@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>AlgerCall</title>
     <link rel="shortcut icon" href="assets/crown-solid.svg" type="image/x-icon">
     <link
@@ -17,76 +18,90 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--BOUTON HAUT-->
-    <a href="#" class="btn-haut">
-      <i class="fa-solid fa-angles-up icone-arrow"></i>
-    </a>
-
-    <!--RESEAUX SOCIAUX-->
-    <div class="reseaux-sociaux">
-      <div class="contact-social"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
-      <div class="social-item"><a href="#"><i class="fa-brands fa-yahoo"></i></a></div>
-      <div class="social-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
-      <div class="social-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
-
-    </div>
+    
 
 
 
     <header>
-      <!--BARRE DE NAVIGATION-->
-      
-      <div class="nav-bar">
-          <div class="left-nav-bar">
-            <div class="logonav-slogan-phAlger">
-              <i class="fa-brands fa-phoenix-framework logo-nav"></i>
-              <div class="slogan">
-                <h1>ALGER CALL</h1>
-                <h6>By EARL Lamali CORP, Télémarketing</h6>
-                <p>Experts en PRESTATIOONS télémarketing</p>
-              </div>
-              <div class="image-alger">
-                <img src="assets/Alger.jpg" alt="">
-              </div>
-            </div>
-          </div>
-<!--SELECTEUR LANGUE + BOUTON-->
-          <div class="right-nav-bar">
-            <div class="langmenu-connect-menunav">
-              <div class="langmenu-connect">
-                   <!--selecteur de langue--> 
-                <div class="info" id="select-language">
-                  <select>
-                    <option value="fr"><a href="#" class="fr">Français</a></option>
-                    <option value="en"><a href="#" class="en">English</a></option>
+      <section>
+        <!--BOUTON HAUT-->
+        <div>
+          <a href="#" class="btn-haut">
+          <i class="fa-solid fa-angles-up icone-arrow"></i></a>
+        </div>
+
+    
+
+        <!--RESEAUX SOCIAUX-->
+        <div class="reseaux-sociaux">
+          <div class="contact-social"><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+          <div class="social-item"><a href="#"><i class="fa-brands fa-yahoo"></i></a></div>
+          <div class="social-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+          <div class="social-item"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div>
+
+        </div>
         
-                  </select>
-                </div>
+      </section>
+      
+      <!--BARRE DE NAVIGATION-->
+      <section class="nav-bar">
 
-                <!--bouton de connexion-->
-                <div class="connect-btn">
-                  <button class="btn" id="displayForm"><i class="fa-solid fa-user user"></i>Se connecter</button>
-                </div>
-              
-              </div>
-
-              <!--contenu de la barre de navigation-->
-
-              <div class="menu-nav">
-                <div class="nav-inner">
-                  <ul>
-                    <li class="nav-item"><a href="#home"><i class="fa-solid fa-house-chimney icone-home"></i></a></li>
-                    <li class="nav-item"><a href="#nous-connaitre">NOUS CONNAÎTRE<div id="bar-red"></div></a></li>
-
-                    <li class="nav-item"><a href="#demarche">AVIS CLIENTS<div id="bar-yellow"></div></a></li>
-                    <li class="nav-item"><a href="#contact">NOUS CONTACTER / NOUS REJOINDRE<div id="bar-blue"></div></a></li>
-           
-                  </ul>
-                </div>
-              </div>
+        
+        <div class="left-nav-bar">
+          <div class="logonav-slogan-phAlger">
+            <i class="fa-brands fa-phoenix-framework logo-nav"></i>
+            <div class="slogan">
+              <h1>ALGER CALL</h1>
+              <h6>By EARL Lamali CORP, Télémarketing</h6>
+              <p>Experts en PRESTATIOONS télémarketing</p>
+            </div>
+            <div class="image-alger">
+              <img src="assets/Alger.jpg" alt="">
             </div>
           </div>
-      </div> 
+        </div>
+                 <!--SELECTEUR LANGUE + BOUTON-->
+        <div class="right-nav-bar">
+          <div class="langmenu-connect-menunav">
+            <div class="langmenu-connect">
+                   <!--selecteur de langue--> 
+              <div class="info" id="select-language">
+                <select>
+                  <option value="fr"><a href="#" class="fr">Français</a></option>
+                  <option value="en"><a href="#" class="en">English</a></option>
+                </select>
+              </div>
+
+      <!--bouton de connexion-->
+              <div class="connect-btn">
+                <button class="btn" id="displayForm"><i class="fa-solid fa-user user"></i>Connexion</button>
+              </div>
+              
+            </div>
+<!--contenu de la barre de navigation-->
+
+            
+          </div>
+        </div>
+          
+      </section> 
+
+      <div class="menu-nav">
+        <div class="menu">
+          <span class="bar first"></span>
+          <span class="bar second"></span>
+          <span class="bar third"></span>
+        </div>
+        <div class="nav-inner" id="myTopnav">
+          <ul>
+            <li class="nav-item"><a href="#home" class="active"><i class="fa-solid fa-house-chimney icone-home"></i></a></li>
+            <li class="nav-item"><a href="#nous-connaitre">NOUS CONNAÎTRE<div id="bar-red"></div></a></li>
+            <li class="nav-item"><a href="#demarche">AVIS CLIENTS<div id="bar-yellow"></div></a></li>
+            <li class="nav-item"><a href="#contact">NOUS CONTACTER / NOUS REJOINDRE<div id="bar-blue"></div></a></li>
+          </ul>
+        </div>
+      </div>
+  
       <!--formulaires de connexion-->
       
       <section class="connexion">
@@ -163,7 +178,7 @@
       
 
       <!--DEFILE LISTE CLIENT-->
-      <div class="liste-client">
+      <section class="liste-client">
         <h3>Ils nous font confiance</h3>
         <div class="logos-clients">
           <img src="assets/algérie.png" alt="">
@@ -174,12 +189,12 @@
           <img src="assets/australie.png" alt="">
           <img src="assets/lettonie.png" alt="">
         </div>
-      </div>
+      </section>
     
     </header>
 
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="home-inner">
           <div class="img-groupe">
             <img src="assets/plateau1.jpg" alt="">
@@ -205,7 +220,7 @@
 
       <section id="nous-connaitre" class="nous-connaitre">
         <div class="nousconnaitre-questions">
-          <h2>Vos soucis d'appels, Nos priorités d'appels!</h2>
+          <h2 id="slogan">Vos soucis d'appels, Notre priorité d'appel!</h2>
           <h2>Qui sommes nous<i class="fa-solid fa-question qMark"></i></h2>
           <h2>Nous sommes <span>AlgerCall,</span> AGENCE DE TELEMARKETING & DE TELE-VENTE<i class="fa-solid fa-lightbulb"></i></h2>
         </div>
@@ -213,13 +228,13 @@
         <div class="nousconnaitre-inner">
           
           <div class="nousconnaitre-reponse">
-            <p>Nous fournissons à nos clients un service clé en main. De ce fait nous sommes fière de participer à l'essor
-              d'une clientèle variée depuis plus de dix ans.
-              Alors, choisir AlgerCall c'est garantir la croissance de votre entreprise.
+            <p>Nous fournissons à nos clients un service clé en main. De ce fait nous sommes fière de participer, depuis plus de dix ans
+              à l'essor d'une clientèle variée.<br>
+              Alors, choisir AlgerCall c'est garantir la croissance de votre entreprise.<br>
                Vous travaillerez en étroite collaboration avec l'un(e) de nos experts(es) de la prospection commercial(e) 
                ou service à la clientèle dédié(e) salarié(e) de l'entreprise afin de valider vos enjeux, vos objectifs et 
-               les cibles à atteindre.
-               Un des meilleurs rapports qualité/prix pour une expérience des plus enrichissante tout étant basé en Algérie.      objectifs, et définirons les cibles à atteindre.
+               les cibles à atteindre.<br>
+               Un des meilleurs rapports qualité/prix pour une expérience des plus enrichissante tout en étant basé en Algérie.      
                 
 
             </p>
@@ -228,7 +243,7 @@
           
           
           <div class="algercall-taches">
-            <p><span>Alger Call</span> prend en charge pour vous, vos :</p>
+            <p><span>AlgerCall</span> prend en charge pour vous, vos :</p>
             <ul>
               <li><i class="fa-solid fa-caret-right"></i>Prise de rendez-vous</li>
               <li><i class="fa-solid fa-caret-right"></i>Télévente et télémarketing</li>
@@ -236,7 +251,7 @@
               <li><i class="fa-solid fa-caret-right"></i>Standard</li>
               <li><i class="fa-solid fa-caret-right"></i>Enquête de satisfaction...</li>
             </ul> 
-            <img src="assets/plateau2.jfif" alt="">         
+            <img src="assets/plateau2.jpg" alt="">         
           </div>
           
         </div>
@@ -245,7 +260,59 @@
 
       <!--QUE PENSENT DE NOUS NOS CLIENT-->
       <section id="demarche" class="retour-client">
-        <h2>Que pensent de nous nos clients</h2>
+        <div id="avis">
+          <h2>Que pensent de nous nos clients?</h2>
+        </div>
+        <div class="tousLesAvis">
+          <div class="avis-ligne1">
+            <div class="avis" id="avis1">
+              <h5>Nom de l'entreprise</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                provident totam et nisi, 
+                quaerat quae illo in consectetur cum perspiciatis impedit quasi eum facere recusandae!
+              </p>
+              <h5 class="signature">Signature</h5>
+            </div>
+            <div class="avis" id="avis2">
+              <h5>Nom de l'entreprise</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                provident totam et nisi, 
+                quaerat quae illo in consectetur cum perspiciatis impedit quasi eum facere recusandae!
+              </p>
+              <h5 class="signature">Signature</h5>
+            </div>
+          </div>
+          
+          <div class="avis-ligne2">
+            <div class="avis" id="avis3">
+              <h5>Nom de l'entreprise</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                provident totam et nisi, 
+                quaerat quae illo in consectetur cum perspiciatis impedit quasi eum facere recusandae!
+              </p>
+              <h5 class="signature">Signature</h5>
+            </div> 
+          </div>
+
+          <div class="avis-ligne3">
+            <div class="avis" id="avis4">
+              <h5>Nom de l'entreprise</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                provident totam et nisi, 
+                quaerat quae illo in consectetur cum perspiciatis impedit quasi eum facere recusandae!
+              </p>
+              <h5 class="signature">Signature</h5>
+            </div>
+            <div class="avis" id="avis5">
+              <h5>Nom de l'entreprise</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                provident totam et nisi, 
+                quaerat quae illo in consectetur cum perspiciatis impedit quasi eum facere recusandae!
+              </p>
+              <h5 class="signature">Signature</h5>
+            </div>
+          </div>
+        </div>
       </section>
       
       <!--FORMULAIRE CONTACT-->   
@@ -292,24 +359,25 @@
           </form>
         </div>
       </section>
+      
     </main>
     <!--BAS DE PAGE-->
     <footer>
-      <div class="footer-inner">
+      <section class="footer-inner" id="bas-page">
         
         <div class="gmaps">
           <p>Nous trouver</p>
           <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d325.1153174162533!2d3.054774365622229!3d36.770240805693774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAir%20Alg%C3%A9rie!5e1!3m2!1sfr!2sdz!4v1668123246452!5m2!1sfr!2sdz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="adresse">
-          <span><p>Alger Call</p></span>
+        <div class="adresse" id="fin">
+          <span><p>AlgerCall</p></span>
           <div class="ad">
             <p><i class="fa-solid fa-address-card"></i>7, rue Henri Dunan place Maurice Audin Alger 16000</p>
           </div>
           <div class="tel"><p><i class="fa-solid fa-phone-volume"></i>Tél (+213)21782919</p></div>
           <div class="mail"><p><i class="fa-solid fa-at"></i>contact@yahoo.fr</p></div>
         </div>
-      </div>
+      </section>
     </footer>
     <script src="script.js"></script>
   </body>
